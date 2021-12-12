@@ -1,5 +1,9 @@
 let     isDev;
 
+let promise = new Promise((res) => {
+    res(isDev);
+})
+
 function setIsDev(value)
 {
     isDev = value;

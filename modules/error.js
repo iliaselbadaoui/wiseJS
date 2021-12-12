@@ -1,21 +1,9 @@
-let     isDev;
-
-let promise = new Promise((res) => {
-    res(isDev);
-})
-
-function setIsDev(value)
-{
-    isDev = value;
-}
+import wise from './wise.js'
 
 function    error(message)
 {
-    if (isDev === true)
-    {
-        let err = new Error(message)
-        console.error(err.stack)
-    }
+    let err = new Error(message)
+    console.error(err.stack)
 }
 
-export default {setIsDev, error}
+export default { error }

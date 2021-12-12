@@ -1,4 +1,5 @@
 import error from "./error.js";
+
 export function audio(id, className)
 {
     let audio =  document.createElement('audio');
@@ -24,7 +25,7 @@ export function button(value, id , className)
         className !== undefined ? button.className = className : null;
         return button;
     }
-    error("A button needs a value.");
+    error.error("A button needs a value.");
 }
 
 export function image(id, className)

@@ -28,12 +28,17 @@ export function button(value, id , className)
     error.error("A button needs a value.");
 }
 
-export function image(id, className)
+export function image(src, id, className)
 {
-    let image =  document.createElement('img');
-    id !== undefined ? image.id = id : null;
-    className !== undefined ? image.className = className : null;
-    return image;
+    if (src !== undefined && src !== null)
+    {
+        let image =  document.createElement('img');
+        image.src = src;
+        id !== undefined ? image.id = id : null;
+        className !== undefined ? image.className = className : null;
+        return image;
+        error.error("Specify the image's source");
+    }
 }
 
 export function inlineBlock(id, className)

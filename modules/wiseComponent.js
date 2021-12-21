@@ -38,3 +38,9 @@ export default class   wiseComponent
         this.baseElement[Component.name] = Component;
     }
 }
+
+export function  getComponent(name)
+{
+    let res = components.get(name);
+    return res
+}

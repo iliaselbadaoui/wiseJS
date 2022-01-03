@@ -17,8 +17,8 @@ async function ready(callback) {
     let interval = setInterval(() => {
         if (_state === "ready")
         {
-            callback();
             clearInterval(interval);
+            callback();
         }
     }, 20);
 }

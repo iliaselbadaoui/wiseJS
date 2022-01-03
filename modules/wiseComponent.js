@@ -4,7 +4,7 @@ export default class   wiseComponent
 {
     constructor (name, baseElement, isUnique)
     {
-        if (components.get(name) === undefined)
+        if (components.get(name) === undefined || components.get(name) === null)
         {
             this.baseElement = baseElement;
             this.name = name;
@@ -34,7 +34,7 @@ export default class   wiseComponent
             let error = new Error(this.name + " has already an element with the same name.")
             console.error(error.stack);   
         }
-        this.baseElement.appendChild(Component.baseElement);
+        this.baseElement.append(Component.baseElement);
         this.baseElement[Component.name] = Component;
     }
 }

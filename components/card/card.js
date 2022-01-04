@@ -1,5 +1,5 @@
-import wc from "../modules/wiseComponent.js";
-import { block, image, input, text, strictMask } from "../modules/elements.js";
+import wc from "../../modules/wiseComponent.js";
+import { block, image, input, text, strictMask } from "../../modules/elements.js";
 
 
 let card = new wc("card", block("card"), true),

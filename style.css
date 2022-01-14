@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
+*{margin: 0;padding: 0;}
 #app
 {
     display: flex;
@@ -20,6 +21,10 @@
     border: 1px solid #a1a1a1;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .6);
     position: relative;
+}
+#logo
+{
+    font-family: 'Playfair Display', serif;
 }
 #vendor
 {

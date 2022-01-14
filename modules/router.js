@@ -1,15 +1,14 @@
-function initiate(mainComponent, mainRoute) {
-	// let url = new URL(mainRoute);
-	history.pushState(JSON.stringify(mainComponent), undefined, mainRoute);
-	console.log(window.location);
-}
+import { isMemberExpressionBrowser } from "@vue/compiler-core";
 
-function add(component, route) {
-	history.pushState(JSON.stringify(component), undefined, route);
-}
-
-// function listen() {
+function initiate(mainRoute, mainComponent) {
 	
-// }
+	history.pushState(JSON.stringify(mainComponent), "", mainRoute);
+	window.onpopstate = function () {
+		alert(history.state);
+	}
+	// window.onbeforeunload = function () {
+	// 	alert("It's being unloaded")
+	// }
+}
 
-export default {initiate, add};
+export default { initiate }
